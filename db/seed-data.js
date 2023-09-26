@@ -26,7 +26,7 @@ export async function dropTables() {
   console.log("Starting to dop tables...");
   try {
     await client.query(`
-        DROP TABLE meats;
+        DROP TABLE IF EXSITS items;
         `);
     console.log("Tables have been dropped!");
   } catch (err) {
