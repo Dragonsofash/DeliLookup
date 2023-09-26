@@ -4,9 +4,15 @@ export async function createTables() {
   console.log("Starting to build tables...");
   try {
     await client.query(`
-    CREATE TABLE meats (
+    CREATE TABLE items (
         id SERIAL PRIMARY KEY,
-
+        name VARCHAR(255) NOT NULL,
+        description VARCHAR(255) NOT NULL,
+        plu INTEGER NOT NULL,
+        brand VARCHAR(255) NOT NULL,
+        category VARCHAR(255) NOT NULL,
+        "grabNgo" BOOLEAN DEFUALT false,
+        price INTEGER NOT NULL;
     );
     `);
     console.log("Tables have been built!");
