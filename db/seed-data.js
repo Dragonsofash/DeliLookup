@@ -11,7 +11,7 @@ export async function createTables() {
         plu INTEGER NOT NULL,
         brand VARCHAR(255) NOT NULL,
         category VARCHAR(255) NOT NULL,
-        "grabNgo" BOOLEAN DEFUALT false,
+        "grabNgo" BOOLEAN DEFAULT false,
         price INTEGER NOT NULL;
     );
     `);

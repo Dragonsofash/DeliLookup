@@ -6,7 +6,7 @@ async function createItems({
   plu,
   brand,
   category,
-  grapNgo,
+  grabNgo,
   price,
 }) {
   try {
@@ -14,11 +14,11 @@ async function createItems({
       rows: [item],
     } = await client.query(
       `
-        INSERT INTO items (name, description, plu, brand, category, grapNgo, price)
+        INSERT INTO items (name, description, plu, brand, category, grabNgo, price)
         VALUES ($1, $2, $3, $4, $5, $6, $7)
         RETURNING *;
         `,
-      [name, description, plu, brand, category, grapNgo, price]
+      [name, description, plu, brand, category, grabNgo, price]
     );
     return item;
   } catch (err) {
